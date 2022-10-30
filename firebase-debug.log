@@ -1,0 +1,87 @@
+[debug] [2022-10-30T13:28:55.786Z] ----------------------------------------------------------------------
+[debug] [2022-10-30T13:28:55.788Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2022-10-30T13:28:55.788Z] CLI Version:   11.15.0
+[debug] [2022-10-30T13:28:55.789Z] Platform:      linux
+[debug] [2022-10-30T13:28:55.789Z] Node Version:  v18.12.0
+[debug] [2022-10-30T13:28:55.789Z] Time:          Sun Oct 30 2022 16:28:55 GMT+0300 (East Africa Time)
+[debug] [2022-10-30T13:28:55.789Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-30T13:28:55.887Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-30T13:28:55.887Z] > authorizing via signed-in user (lxwaihenya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/lexie/Lexie Entertainment/JITU/PROJECTS/QUIKKFRONTEND
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-30T13:29:01.941Z] Using project from CLI flag: quikk-frontend
+[debug] [2022-10-30T13:29:01.946Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/quikk-frontend [none]
+[debug] [2022-10-30T13:29:02.692Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/quikk-frontend 200
+[debug] [2022-10-30T13:29:02.692Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/quikk-frontend {"projectId":"quikk-frontend","projectNumber":"695691831719","displayName":"QUIKK-FRONTEND","name":"projects/quikk-frontend","resources":{"hostingSite":"quikk-frontend","storageBucket":"quikk-frontend.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_65fe13f1-e9b1-43e0-b76c-8c5d00a60781"}
+[info] i  Using project quikk-frontend (QUIKK-FRONTEND) 
+[info] 
+=== Firestore Setup
+[debug] [2022-10-30T13:29:02.737Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/quikk-frontend/services/firestore.googleapis.com [none]
+[debug] [2022-10-30T13:29:02.737Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/quikk-frontend/services/firestore.googleapis.com x-goog-quota-user=projects/quikk-frontend
+[debug] [2022-10-30T13:29:04.518Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/quikk-frontend/services/firestore.googleapis.com 200
+[debug] [2022-10-30T13:29:04.518Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/quikk-frontend/services/firestore.googleapis.com [omitted]
+[debug] [2022-10-30T13:29:04.520Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/quikk-frontend [none]
+[debug] [2022-10-30T13:29:05.744Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/quikk-frontend 200
+[debug] [2022-10-30T13:29:05.744Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/quikk-frontend {"name":"apps/quikk-frontend","id":"quikk-frontend","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.quikk-frontend.appspot.com","servingStatus":"SERVING","defaultHostname":"quikk-frontend.uc.r.appspot.com","defaultBucket":"quikk-frontend.appspot.com","serviceAccount":"quikk-frontend@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-10-30T13:29:05.745Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-10-30T13:29:05.746Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-30T13:29:05.747Z] > authorizing via signed-in user (lxwaihenya@gmail.com)
+[debug] [2022-10-30T13:29:05.747Z] [iam] checking project quikk-frontend for permissions ["firebase.projects.get"]
+[debug] [2022-10-30T13:29:05.749Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/quikk-frontend:testIamPermissions [none]
+[debug] [2022-10-30T13:29:05.750Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/quikk-frontend:testIamPermissions x-goog-quota-user=projects/quikk-frontend
+[debug] [2022-10-30T13:29:05.750Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quikk-frontend:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-30T13:29:07.382Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/quikk-frontend:testIamPermissions 200
+[debug] [2022-10-30T13:29:07.383Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quikk-frontend:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Didn't detect a .git folder. Assuming /media/lexie/Lexie Entertainment/JITU/PROJECTS/QUIKKFRONTEND is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=351367995&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-10-30T13:29:53.319Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-10-30T13:29:53.319Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-10-30T13:29:54.070Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-10-30T13:29:54.070Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-10-30T13:29:54.210Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-10-30T13:29:55.207Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-10-30T13:29:55.208Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"alexwaihenya","id":43568554,"node_id":"MDQ6VXNlcjQzNTY4NTU0","avatar_url":"https://avatars.githubusercontent.com/u/43568554?v=4","gravatar_id":"","url":"https://api.github.com/users/alexwaihenya","html_url":"https://github.com/alexwaihenya","followers_url":"https://api.github.com/users/alexwaihenya/followers","following_url":"https://api.github.com/users/alexwaihenya/following{/other_user}","gists_url":"https://api.github.com/users/alexwaihenya/gists{/gist_id}","starred_url":"https://api.github.com/users/alexwaihenya/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/alexwaihenya/subscriptions","organizations_url":"https://api.github.com/users/alexwaihenya/orgs","repos_url":"https://api.github.com/users/alexwaihenya/repos","events_url":"https://api.github.com/users/alexwaihenya/events{/privacy}","received_events_url":"https://api.github.com/users/alexwaihenya/received_events","type":"User","site_admin":false,"name":"Alex Waihenya","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":17,"public_gists":0,"followers":4,"following":11,"created_at":"2018-09-25T08:46:44Z","updated_at":"2022-10-29T20:43:52Z","private_gists":0,"total_private_repos":2,"owned_private_repos":2,"disk_usage":9128,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as alexwaihenya 
+[info] 
