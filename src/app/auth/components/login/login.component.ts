@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginDetails } from 'src/app/interfaces/user';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 
@@ -11,9 +12,10 @@ import { LoginDetails } from 'src/app/interfaces/user';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form!:  FormGroup;
+  form!: FormGroup;
+  accountErrorMessage!: string;
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private fb: FormBuilder, private router: Router,private authService:AuthService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -27,8 +29,13 @@ export class LoginComponent implements OnInit {
 
     const loginUser: LoginDetails = { ...this.form.value };
     console.log(loginUser);
+    
+    let response = this.authService.loging(loginUser.email, loginUser.password);
+  
+    
+    console.log(response);
 
-    this.router.navigate(['dashboard'])
+    // this.router.navigate(['dashboard'])
 
 
   }

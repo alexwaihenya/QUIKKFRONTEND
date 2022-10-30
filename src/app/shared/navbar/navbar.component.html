@@ -1,28 +1,39 @@
 <div class="container">
   <div class="logo">
-    <!-- <img src="https://t4.ftcdn.net/jpg/02/90/98/39/360_F_290983972_mYCCKvVWzmQUhNoWIdwjSdlPADb3Prf2.jpg" alt="" srcset="" width="50px" height="50px"> -->
     <span>Quikk</span>
   </div>
 
   <div class="links">
-    <a routerLink="">Home</a>
-    <a routerLink="">Product</a>
-    <a routerLink="">Pricing</a>
-    <a routerLink="">Our solutions</a>
+    <a *ngIf="!authService.loging" routerLink="">Home</a>
+    <a *ngIf="!authService.loging" routerLink="">Product</a>
+    <a *ngIf="!authService.loging" routerLink="">Pricing</a>
+    <a *ngIf="!authService.loging" routerLink="">Our solutions</a>
   </div>
 
   <div class="buttons">
-    <!-- <button
-      class="btn-login"
-      routerLink="auth/login"
+    <button
+      *ngIf="!authService.loging"
+      type="button"
+      class="btn btn-light"
+      routerLink="register"
     >
       Sign up
-    </button> -->
-    <button type="button" class="btn btn-light" routerLink="register">Sign up</button>
-    <button type="button" class="btn btn-outline-light" routerLink="login">Log in</button>
-    <!-- <button>
+    </button>
+    <button
+      *ngIf="!authService.loging"
+      type="button"
+      class="btn btn-outline-light"
+      routerLink="login"
+    >
+      Log in
+    </button>
+    <button
+      *ngIf="authService.loging"
+      type="button"
+      class="btn btn-outline-light"
+      (click)="logout()"
+    >
       Log out
-    </button> -->
-    <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+    </button>
   </div>
 </div>

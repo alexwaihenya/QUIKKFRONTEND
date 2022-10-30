@@ -1,6 +1,8 @@
 <div class="container">
   <div class="login">
     <h1 class="text-center">Welcome!!</h1>
+    <div *ngIf="accountErrorMessage">{{ accountErrorMessage }}</div>
+
 
     <form [formGroup]="form" (ngSubmit)="Login()" class="needs-validation">
       <div class="form-group was-validated">
