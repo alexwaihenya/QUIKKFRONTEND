@@ -45,11 +45,17 @@ export class AuthService {
       return error;
     }
   }
+  hasToken = true
 
   async loging(email: string, password: string) {
     try {
       await signInWithEmailAndPassword(this.auth, email, password).then(() => {
         localStorage.setItem('token', 'true');
+        console.log(this.hasToken);
+        this.hasToken=true
+      
+       
+      
         this.router.navigate(['dashboard']);
       });
     } catch (error: any) {
@@ -72,13 +78,22 @@ export class AuthService {
     }
   }
 
+
+  
+  
+
   async logout() {
     try {
-      await this.auth.signOut().then((res) => {
-       console.log(res);
+      await this.auth.signOut().then(() => {
+    
        
-        localStorage.removeItem('token');
-        this.router.navigate([' ']);
+        localStorage.clear();
+        this.hasToken = false;
+        console.log(this.hasToken);
+        
+     
+
+        this.router.navigate(['']);
       });
     } catch (error: any) {
       console.log(error.code);

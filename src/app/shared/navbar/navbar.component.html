@@ -4,15 +4,15 @@
   </div>
 
   <div class="links">
-    <a *ngIf="!authService.loging" routerLink="">Home</a>
-    <a *ngIf="!authService.loging" routerLink="">Product</a>
-    <a *ngIf="!authService.loging" routerLink="">Pricing</a>
-    <a *ngIf="!authService.loging" routerLink="">Our solutions</a>
+    <a *ngIf="!authService.hasToken" routerLink="">Home</a>
+    <a *ngIf="!authService.hasToken" routerLink="">Product</a>
+    <a *ngIf="!authService.hasToken" routerLink="">Pricing</a>
+    <a *ngIf="!authService.hasToken" routerLink="">Our solutions</a>
   </div>
 
   <div class="buttons">
     <button
-      *ngIf="!authService.loging"
+      *ngIf="!authService.hasToken"
       type="button"
       class="btn btn-light"
       routerLink="register"
@@ -20,7 +20,7 @@
       Sign up
     </button>
     <button
-      *ngIf="!authService.loging"
+      *ngIf="!authService.hasToken"
       type="button"
       class="btn btn-outline-light"
       routerLink="login"
@@ -28,10 +28,11 @@
       Log in
     </button>
     <button
-      *ngIf="authService.loging"
+      *ngIf="authService.hasToken"
       type="button"
       class="btn btn-outline-light"
       (click)="logout()"
+      routerLink="login"
     >
       Log out
     </button>
